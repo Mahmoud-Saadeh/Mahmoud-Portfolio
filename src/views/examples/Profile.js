@@ -15,15 +15,15 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React from 'react';
 
 // reactstrap components
-import { Button, Card, Container, Row, Col } from "reactstrap";
+import { Button, Card, Container, Row, Col } from 'reactstrap';
 
 // core components
-import DemoNavbar from "components/Navbars/DemoNavbar.js";
-import SimpleFooter from "components/Footers/SimpleFooter.js";
-import profile from "assets/img/theme/My-Profile.png";
+import DemoNavbar from 'components/Navbars/DemoNavbar.js';
+import SimpleFooter from 'components/Footers/SimpleFooter.js';
+import profile from 'assets/img/theme/My-Profile.jpg';
 
 class Profile extends React.Component {
   componentDidMount() {
@@ -31,6 +31,12 @@ class Profile extends React.Component {
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
   }
+  calculate_age(dob) { 
+    var diff_ms = Date.now() - dob.getTime();
+    var age_dt = new Date(diff_ms); 
+  
+    return Math.abs(age_dt.getUTCFullYear() - 1970);
+}
   render() {
     return (
       <>
@@ -71,11 +77,12 @@ class Profile extends React.Component {
                   <Row className="justify-content-center">
                     <Col className="order-lg-2" lg="3">
                       <div className="card-profile-image">
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
+                        <a href="#pablo" onClick={(e) => e.preventDefault()}>
                           <img
                             alt="..."
                             className="rounded-circle"
                             src={profile}
+                            style={{ objectFit: 'cover' }}
                           />
                         </a>
                       </div>
@@ -88,13 +95,13 @@ class Profile extends React.Component {
                         <Button
                           className="mr-4"
                           color="info"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          href="mailto:mahmoud.saadeh998@gmail.com"
+                          onClick={(e) => e.preventDefault()}
                           size="sm"
                         >
-                          Connect
+                          Email
                         </Button>
-                        <Button
+                        {/* <Button
                           className="float-right"
                           color="default"
                           href="#pablo"
@@ -102,7 +109,7 @@ class Profile extends React.Component {
                           size="sm"
                         >
                           Message
-                        </Button>
+                        </Button> */}
                       </div>
                     </Col>
                     <Col className="order-lg-1" lg="4">
@@ -112,11 +119,11 @@ class Profile extends React.Component {
                           <span className="description">HTML+CSS+JS</span>
                         </div>
                         <div>
-                          <span className="heading">6</span>
+                          <span className="heading">8</span>
                           <span className="description">React</span>
                         </div>
                         <div>
-                          <span className="heading">2</span>
+                          <span className="heading">4</span>
                           <span className="description">React+Node</span>
                         </div>
                       </div>
@@ -124,8 +131,8 @@ class Profile extends React.Component {
                   </Row>
                   <div className="text-center mt-5">
                     <h3>
-                      Mahmoud Saadeh{" "}
-                      <span className="font-weight-light">, 23</span>
+                      Mahmoud Saadeh{' '}
+                      <span className="font-weight-light">, {this.calculate_age(new Date(1998, 4, 28))}</span>
                     </h3>
                     <div className="h6 font-weight-300">
                       <i className="ni location_pin mr-2" />
@@ -141,7 +148,7 @@ class Profile extends React.Component {
                     </div>
                   </div>
                   <div className="mt-5 py-5 border-top text-center">
-                    <Row className="justify-content-center">
+                    {/* <Row className="justify-content-center">
                       <Col lg="9">
                         <p>
                           An artist of considerable range, Ryan — the name taken
@@ -150,11 +157,11 @@ class Profile extends React.Component {
                           giving it a warm, intimate feel with a solid groove
                           structure. An artist of considerable range.
                         </p>
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
+                        <a href="#pablo" onClick={(e) => e.preventDefault()}>
                           Show more
                         </a>
                       </Col>
-                    </Row>
+                    </Row> */}
                   </div>
                 </div>
               </Card>

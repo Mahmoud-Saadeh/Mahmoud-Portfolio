@@ -33,7 +33,7 @@ import {
 } from "reactstrap";
 import landing from "assets/img/theme/landing.jpg";
 import profile from "assets/img/theme/profile.jpg";
-
+import Project_301 from "assets/img/theme/301-proj.jpg";
 class CardsFooter extends React.Component {
   render() {
     return (
@@ -56,7 +56,7 @@ class CardsFooter extends React.Component {
                   <Link to="/profile-page">
                     <CardImg
                       alt="..."
-                      src={profile}
+                      src={Project_301}
                     />
                   </Link>
                 </Card>
@@ -67,7 +67,7 @@ class CardsFooter extends React.Component {
             <Row className="row-grid align-items-center my-md">
               <Col lg="6">
                 <h3 className="text-primary font-weight-light mb-2">
-                  Thank you for supporting us!
+                  Thank you for supporting me!
                 </h3>
                 <h4 className="mb-0 font-weight-light">
                   Let's get in touch on any of these platforms.

@@ -25,6 +25,7 @@ import team1 from "assets/img/theme/team-1-800x800.jpg";
 import team2 from "assets/img/theme/team-2-800x800.jpg";
 import team3 from "assets/img/theme/team-3-800x800.jpg";
 import team4 from "assets/img/theme/team-4-800x800.jpg";
+
 import background from "assets/img/theme/Development-cuate.png";
 // reactstrap components
 import {
@@ -87,8 +88,8 @@ class Landing extends React.Component {
                         <span>about technology?</span>
                       </h1>
                       <p className="lead text-white">
-                        It is fun and challenging to discover new features evrey now and then
-                        that makes life easier and more exciting.
+                        It is fun and challenging to discover new features every now and then
+                        that makes life easier and more exciting, and technology is pivotal in our society.
                       </p>
                       {/* <div className="btn-wrapper">
                         <Button
@@ -166,17 +167,85 @@ class Landing extends React.Component {
                             <Badge color="primary" pill className="mr-1">
                               JavaScript
                             </Badge>
-                          </div>
-                          <a href="https://github.com/Group-4-ASAC/Organic-Food" target='_blank'>
+                          </div> 
+                          {/* https://group-4-asac.github.io/Organic-Food/ */}
+                          <a href="https://github.com/Group-4-ASAC/Organic-Food" target='_blank' rel="noopener noreferrer">
                           <Button
                             className="mt-4"
                             color="primary"
+                            size="sm"
+                            style={{marginRight:'10px'}}
                             // href="#pablo"
                             // onClick={e => e.preventDefault()}
                           >
                           Learn more <i className="fa fa-github" />
                             
-                          </Button></a>
+                          </Button>
+                          </a>
+                          <a href="https://group-4-asac.github.io/Organic-Food/" target='_blank' rel="noopener noreferrer">
+                          <Button
+                            className="mt-4"
+                            color="default"
+                            size="sm"
+                            // href="#pablo"
+                            // onClick={e => e.preventDefault()}
+                          >
+                          The Website
+                            
+                          </Button>
+                          </a>
+                        </CardBody>
+                      </Card>
+                    </Col>
+                    
+                    <Col lg="4">
+                      <Card className="card-lift--hover shadow border-0">
+                        <CardBody className="py-5">
+                          <div className="icon icon-shape icon-shape-warning rounded-circle mb-4">
+                            {/* <i className="ni ni-planet" /> */}
+                            <i class="fa fa-television" aria-hidden="true"></i>
+                          </div>
+                          <h6 className="text-warning text-uppercase">
+                          Entertainment Syndicate
+                          </h6>
+                          <p className="description mt-3">
+                            Explore your favorite Movies, Games and Anime, then share them with other users with your thoughts.
+
+                          </p>
+                          <div>
+                            <Badge color="warning" pill className="mr-1">
+                              React.js
+                            </Badge>
+                            <Badge color="warning" pill className="mr-1">
+                              Node.js
+                            </Badge>
+                            <Badge color="warning" pill className="mr-1">
+                              MongoDB
+                            </Badge>
+                          </div>
+                            <a href="https://github.com/Entertainment-Syndicate" target='_blank' rel="noopener noreferrer">
+                          <Button
+                            className="mt-4"
+                            color="warning"
+                            style={{marginRight:'10px'}}
+                            // href="#pablo"
+                            // onClick={e => e.preventDefault()}
+                            size='sm'
+                          >
+                            Learn more <i className="fa fa-github" />
+                          </Button>
+                            </a>
+                            <a href="https://entertainment-syndicate.netlify.app/" target='_blank' rel="noopener noreferrer">
+                          <Button
+                            className="mt-4"
+                            color="default"
+                            // href="#pablo"
+                            // onClick={e => e.preventDefault()}
+                            size='sm'
+                          >
+                            The Website
+                          </Button>
+                            </a>
                         </CardBody>
                       </Card>
                     </Col>
@@ -187,7 +256,7 @@ class Landing extends React.Component {
                             <i className="ni ni-istanbul" />
                           </div>
                           <h6 className="text-success text-uppercase">
-                            301 Project
+                            401 Project
                           </h6>
                           <p className="description mt-3">
                             Argon is a great free UI package based on Bootstrap
@@ -205,50 +274,29 @@ class Landing extends React.Component {
                               success
                             </Badge>
                           </div>
+                          <a href="https://github.com/Entertainment-Syndicate" target='_blank' rel="noopener noreferrer">
                           <Button
                             className="mt-4"
                             color="success"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            style={{marginRight:'10px'}}
+                            // href="#pablo"
+                            // onClick={e => e.preventDefault()}
+                            size='sm'
                           >
-                            Learn more
+                            Learn more <i className="fa fa-github" />
                           </Button>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                    <Col lg="4">
-                      <Card className="card-lift--hover shadow border-0">
-                        <CardBody className="py-5">
-                          <div className="icon icon-shape icon-shape-warning rounded-circle mb-4">
-                            <i className="ni ni-planet" />
-                          </div>
-                          <h6 className="text-warning text-uppercase">
-                            401 Project
-                          </h6>
-                          <p className="description mt-3">
-                            Argon is a great free UI package based on Bootstrap
-                            4 that includes the most important components and
-                            features.
-                          </p>
-                          <div>
-                            <Badge color="warning" pill className="mr-1">
-                              marketing
-                            </Badge>
-                            <Badge color="warning" pill className="mr-1">
-                              product
-                            </Badge>
-                            <Badge color="warning" pill className="mr-1">
-                              launch
-                            </Badge>
-                          </div>
+                            </a>
+                            <a href="https://entertainment-syndicate.netlify.app/" target='_blank' rel="noopener noreferrer">
                           <Button
                             className="mt-4"
-                            color="warning"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            color="default"
+                            // href="#pablo"
+                            // onClick={e => e.preventDefault()}
+                            size='sm'
                           >
-                            Learn more
+                            The Website
                           </Button>
+                            </a>
                         </CardBody>
                       </Card>
                     </Col>
@@ -278,9 +326,9 @@ class Landing extends React.Component {
 
                       My goal is to get the most amount of knowledge in Web development, to help me find a place among all of the developers in the world.<br/><br/>
 
-                      I worked on 3 projects with a group of developers and we used GitHub and Git for collaboration.<br/><br/>
+                      I worked on 4 projects with a group of developers and we used GitHub and Git for collaboration.<br/><br/>
 
-                      I created more than 10 projects using plain HTML, CSS, and JavaScript. And I created 6 projects with React js using various packages and created 2 full-stack web apps using React and Node.js
+                      I created more than 10 projects using plain HTML, CSS, and JavaScript. And I created 8 projects with React js using various packages and created 4 full-stack web apps using React and Node.js
                     </p>
                     {/* <ul className="list-unstyled mt-5">
                       <li className="py-2">
